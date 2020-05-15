@@ -44,16 +44,16 @@ void Print(Budget budget) {
 
 Budget FromUser() {
     Budget budget;
-    cin << budget.category;
-    cin << budget.limit;
+    cin >> budget.category;
+    cin >> budget.limit;
     return budget;
 }
 
 
-Purchase FromUser() {
+Purchase FromUsers() {
 Purchase item;
-    cin << item.category;
-cin << item.limit;
+    cin >> item.category;
+cin >> item.amount;
     return item;
 }
 
@@ -67,6 +67,7 @@ cin << item.limit;
  * function does by reading it. Once you understand, you are welcome to update
  * this comment to help you remember.
  */
+ // to test whether the spend was within budget 
 void BudgetStatus(Budget budget, int total_spent) {
     cout << "Budget ";
     Print(budget);
