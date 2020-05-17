@@ -42,19 +42,19 @@ void Print(Budget budget) {
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 
-Budget FromUser() {
-    Budget budget;
-    cin >> budget.category;
-    cin >> budget.limit;
-    return budget;
+Budget GetBudgetFromUser(int type) {
+
+  Budget budget;
+  budget.category = type;
+  cin >> budget.limit;
+  return budget;
 }
 
 
-Purchase FromUsers() {
-Purchase item;
-    cin >> item.category;
-cin >> item.amount;
-    return item;
+Purchase GetPurchaseFromUser() {
+  Purchase item;
+  cin >> item.amount;
+  return item;
 }
 
 
@@ -101,7 +101,7 @@ int main() {
     cout << endl;
 
     Purchase item0 = GetPurchaseFromUser();
-    Print(item0);
+    Print(budget item0);
 
     Purchase item1 = GetPurchaseFromUser();
     Print(item1);
