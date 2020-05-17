@@ -42,6 +42,10 @@ void Print(Budget budget) {
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 
+void Print(Purchase amount) {
+  cout << "you are purchasing $ " << Purchase.amount;
+}
+
 Budget GetBudgetFromUser(int type) {
 
   Budget budget;
@@ -101,7 +105,7 @@ int main() {
     cout << endl;
 
     Purchase item0 = GetPurchaseFromUser();
-    Print(budget item0);
+    Print(item0);
 
     Purchase item1 = GetPurchaseFromUser();
     Print(item1);
